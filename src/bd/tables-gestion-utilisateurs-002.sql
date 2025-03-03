@@ -1,0 +1,1 @@
+ALTER TABLE `clients` CHANGE `objectif` `objectif` ENUM('perte de poids','gain musculaire','santé et bien-être') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;

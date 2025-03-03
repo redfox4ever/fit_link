@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ControleurDinscription">
+    <children>
+        <ImageView fx:id="IVSlider" fitHeight="720.0" fitWidth="778.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@image-page-connexion.jpg" />
+            </image>
+        </ImageView>
+        <Pane layoutX="840.0" layoutY="152.0" prefHeight="521.0" prefWidth="356.0" styleClass="pane">
+            <children>
+                <PasswordField fx:id="TFMotDePasse" layoutX="57.0" layoutY="232.0" prefHeight="32.0" prefWidth="249.0" promptText="*******" styleClass="input" />
+                <TextField fx:id="TFEmail" layoutX="53.0" layoutY="168.0" prefHeight="32.0" prefWidth="249.0" promptText="you@example.com" styleClass="input" />
+                <Label layoutX="56.0" layoutY="149.0" text="Email" />
+                <Label layoutX="57.0" layoutY="209.0" text="Mot de passe" />
+                <Button fx:id="BSinscrire" layoutX="53.0" layoutY="366.0" mnemonicParsing="false" onAction="#sInscrire" prefHeight="32.0" prefWidth="249.0" styleClass="inscrire-bouton" text="S'inscrire" />
+                <Label layoutX="91.0" layoutY="53.0" text="S'inscrire">
+                    <font>
+                        <Font size="45.0" />
+                    </font>
+                </Label>
+            <PasswordField fx:id="TFConfirmeMotDePasse" layoutX="57.0" layoutY="299.0" prefHeight="32.0" prefWidth="249.0" promptText="*******" styleClass="input" />
+            <Label layoutX="57.0" layoutY="276.0" text="Confirmer mot de passe" />
+            <Button fx:id="BSeConnecter" layoutX="54.0" layoutY="438.0" mnemonicParsing="false" onAction="#navigerConnexion" prefHeight="32.0" prefWidth="249.0" styleClass="connecter-bouton" text="Se connecter" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

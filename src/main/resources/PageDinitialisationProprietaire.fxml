@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ControleurDinitialisationProprietaire">
+   <children>
+      <Label fx:id="titre" layoutX="413.0" layoutY="104.0" text="Entrez vos informations">
+         <font>
+            <Font size="44.0" />
+         </font>
+      </Label>
+      <TextField fx:id="TFnom" layoutX="486.0" layoutY="251.0" prefHeight="25.0" prefWidth="308.0" styleClass="input" />
+      <TextField fx:id="TFprenom" layoutX="486.0" layoutY="333.0" prefHeight="25.0" prefWidth="308.0" styleClass="input" />
+      <Label layoutX="486.0" layoutY="210.0" text="Nom">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="486.0" layoutY="297.0" text="Prénom">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="Bconfirmer" layoutX="1145.0" layoutY="632.0" mnemonicParsing="false" onAction="#confirmerInitialisationProprietaire" styleClass="bouton-confirmation" text="Confirmer" />
+      <ImageView fitHeight="56.0" fitWidth="48.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#navigerInitialisationUtilisateur" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@left-arrow.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,1 @@
+ALTER TABLE `utilisateurs` CHANGE `mot_de_passe` `mot_de_passe` VARCHAR(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;

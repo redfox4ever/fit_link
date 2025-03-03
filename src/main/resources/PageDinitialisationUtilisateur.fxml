@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ControleurDinitialisationUtilisateur">
+   <children>
+      <Pane layoutX="84.0" layoutY="268.0" onMouseClicked="#navigationInitialisationClient" prefHeight="349.0" prefWidth="285.0" styleClass="pane">
+         <children>
+            <ImageView fitHeight="213.0" fitWidth="211.0" layoutX="37.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@customer.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="94.0" layoutY="257.0" text="Client">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <Pane layoutX="507.0" layoutY="268.0" onMouseClicked="#navigationInittialisationCoach" prefHeight="349.0" prefWidth="285.0" styleClass="pane">
+         <children>
+            <ImageView fitHeight="213.0" fitWidth="211.0" layoutX="37.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@dumbbell.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="94.0" layoutY="257.0" text="Coach">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <Pane layoutX="926.0" layoutY="268.0" onMouseClicked="#navigationInittialisationProprietaire" prefHeight="349.0" prefWidth="285.0" styleClass="pane">
+         <children>
+            <ImageView fitHeight="213.0" fitWidth="211.0" layoutX="37.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@manager.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="45.0" layoutY="266.0" text="Propriétaire">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <Label fx:id="titre" layoutX="317.0" layoutY="111.0" text="Choisissez votre type d'utilisateur">
+         <font>
+            <Font size="44.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

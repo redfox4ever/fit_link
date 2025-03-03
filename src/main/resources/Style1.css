@@ -1,0 +1,187 @@
+.root
+{
+    -fx-background-color: black;
+}
+
+
+
+.label
+{
+    -fx-text-fill: white;
+
+}
+
+
+
+/* ----------------------------------------------  Text Field */
+.text-field
+{
+    -fx-background-color: #343439;
+    -fx-text-fill: white;
+    -fx-border-width: 2;
+    -fx-border-color: #404043;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.text-field:focused
+{
+    -fx-border-width: 3;
+    -fx-border-color: #25834C;
+
+}
+
+/* Text Field ---------------------------------------------- */
+
+
+.pane
+{
+    -fx-background-color: #2c2c2f;
+    -fx-border-width: 5;
+    -fx-border-radius: 30;
+    -fx-background-radius: 30;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75), 2, 0.5, 0, 0);
+    -fx-border-color: #404043FF;
+}
+
+.pane:hover
+{
+    -fx-background-color: #404043;
+    -fx-border-color: #25834C;
+}
+
+
+.bouton-confirmation
+{
+    -fx-background-color: #32974A;
+    -fx-text-fill: white;
+    -fx-border-radius: 12;
+    -fx-padding: 10;
+    -fx-font-size: 16px;
+}
+
+.bouton-confirmation:hover {
+    -fx-background-color: #3eb65c;
+}
+
+
+
+
+
+/* ---------------------------------------------- Choice Box */
+.choice-box
+{
+    -fx-background-color: #343439;
+    -fx-text-fill: white;
+    -fx-border-width: 2;
+    -fx-border-color: #404043;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+
+}
+
+.choice-box:focused
+{
+    -fx-border-color: #25834C;
+    -fx-border-width: 3;
+
+}
+
+.choice-box .label {
+    -fx-background-color: #343439;
+    -fx-text-fill: white;
+}
+
+.choice-box .context-menu {
+    -fx-background-color: #343439;
+}
+
+.choice-box .menu-item:focused {
+    -fx-background-color: #25834C;
+
+}
+
+.choice-box .menu-item:focused .label {
+    -fx-background-color: #25834C;
+}
+
+.choice-box .menu-item:selected {
+    -fx-background-color: #25834C;
+    -fx-text-fill: white;
+}
+
+/* Choice Box ---------------------------------------------- */
+
+
+
+
+/* ----------------------------------------------  Date Picker */
+
+.date-picker
+{
+    -fx-background-color: #343439;
+    -fx-text-fill: white;
+    -fx-border-width: 2;
+    -fx-border-color: #404043;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.date-picker .text-field {
+    -fx-background-color: #343439;
+    -fx-text-fill: white;
+}
+
+.date-picker-popup .date-cell:hover {
+    -fx-background-color: #25834C;
+}
+
+.date-picker .text-field {
+    -fx-border-color: transparent;
+}
+
+.date-picker:focused
+{
+    -fx-border-width: 3;
+    -fx-border-color: #25834C;
+
+}
+
+
+
+/*  Date Picker ---------------------------------------------- */
+
+
+
+/* ---------------------------------------------- Text Area */
+.text-area
+{
+    -fx-background-color: #343439;
+    -fx-text-fill: white;
+    -fx-border-width: 2;
+    -fx-border-color: #404043;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.text-area .content
+{
+    -fx-background-color: #343439;
+}
+
+.text-area:focused
+{
+    -fx-border-width: 3;
+    -fx-border-color: #25834C;
+}
+
+/* Text Area ---------------------------------------------- */
+
+
+/* Spinner ---------------------------------------------- */
+.spinner
+{
+    -fx-background-radius: 5;
+}
+
+/* ---------------------------------------------- Spinner */

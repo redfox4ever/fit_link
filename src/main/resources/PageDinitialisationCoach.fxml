@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ControleurDinitialisationCoach">
+   <children>
+      <Label fx:id="titre" layoutX="413.0" layoutY="33.0" text="Entrez vos informations">
+         <font>
+            <Font size="44.0" />
+         </font>
+      </Label>
+      <TextField fx:id="TFnom" layoutX="486.0" layoutY="163.0" prefHeight="32.0" prefWidth="308.0" styleClass="input" />
+      <TextField fx:id="TFprenom" layoutX="486.0" layoutY="232.0" prefHeight="32.0" prefWidth="308.0" styleClass="input" />
+      <Label layoutX="486.0" layoutY="125.0" text="Nom">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="486.0" layoutY="202.0" text="Prénom">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="Bconfirmer" layoutX="1145.0" layoutY="632.0" mnemonicParsing="false" onAction="#confirmerInitialisationCoach" styleClass="bouton-confirmation" text="Confirmer" />
+      <ChoiceBox fx:id="CBSexe" layoutX="486.0" layoutY="298.0" prefHeight="32.0" prefWidth="308.0" />
+      <DatePicker fx:id="DPDate_de_naissance" layoutX="486.0" layoutY="373.0" prefHeight="32.0" prefWidth="308.0" styleClass="date-picker" />
+      <TextArea fx:id="TADescription" layoutX="487.0" layoutY="440.0" prefHeight="153.0" prefWidth="308.0" styleClass="text-area" />
+      <Label layoutX="486.0" layoutY="267.0" text="Sexe">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="486.0" layoutY="407.0" text="Description">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="486.0" layoutY="341.0" text="Date de naissance">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="56.0" fitWidth="48.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#navigerInitialisationUtilisateur" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@left-arrow.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

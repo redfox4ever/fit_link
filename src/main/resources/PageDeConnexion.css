@@ -1,0 +1,56 @@
+.root
+{
+    -fx-background-color: linear-gradient(from 0% 100% to 0% 0%, #1B1B1E, #25834C);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);
+}
+
+.image-view
+{
+    -fx-border-color: black;
+    -fx-border-width: 2;
+    -fx-border-radius: 30;
+    -fx-background-radius: 30;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);
+}
+
+.pane
+{
+    -fx-background-color: #2c2c2f;
+    -fx-border-width: 1;
+    -fx-border-radius: 30;
+    -fx-background-radius: 30;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75), 2, 0.5, 0, 0);
+}
+
+.label
+{
+    -fx-text-fill: white;
+
+}
+
+.input
+{
+    -fx-background-color: #1B1B1E;
+    -fx-text-fill: white;
+    -fx-border-width: 1;
+    -fx-border-color: #343439;
+}
+
+.input:focused
+{
+    -fx-border-width: 2;
+    -fx-border-color: #25834C;
+
+}
+
+.connecter-bouton
+{
+    -fx-background-color: #32974A;
+    -fx-text-fill: white;
+    -fx-border-radius: 5;
+    -fx-padding: 10;
+    -fx-font-size: 16px;
+}
+.connecter-bouton:hover {
+    -fx-background-color: #3eb65c;
+}
