@@ -115,24 +115,33 @@ public class ControleurPasswordRecover {
                             // Add your password update logic here
                             // For example, you can call a method from ServiceUtilisateur to update the password
 
-                            //TODO: check if passwords match
+                            if(!password.equals(passwordOfConfirmation)) {
+
+                                Alert successAlert = new Alert(Alert.AlertType.INFORMATION);
+                                successAlert.setTitle("Erreur");
+                                successAlert.setHeaderText(null);
+                                successAlert.setContentText("Les mots de passe ne correspondent pas!");
+                                successAlert.showAndWait();
+                                return;
+                            }
 
                             utilisateur.setMot_de_passe(BCrypt.hashpw(password, BCrypt.gensalt(12)));
 
                             try {
+
                                 if (ServiceUtilisateur.mettreAJour(utilisateur) != null) {
                                     Alert successAlert = new Alert(Alert.AlertType.INFORMATION);
-                                    successAlert.setTitle("Success");
+                                    successAlert.setTitle("Succès");
                                     successAlert.setHeaderText(null);
-                                    successAlert.setContentText("Password updated successfully!");
+                                    successAlert.setContentText("Mot de passe mis à jour avec succès!");
                                     successAlert.showAndWait();
 
                                     navigerConnexion();
                                 } else {
                                     Alert errorAlert = new Alert(Alert.AlertType.ERROR);
-                                    errorAlert.setTitle("Error");
+                                    errorAlert.setTitle("Erreur");
                                     errorAlert.setHeaderText(null);
-                                    errorAlert.setContentText("Failed to update password!");
+                                    errorAlert.setContentText("Échec de la mise à jour du mot de passe!");
                                     errorAlert.showAndWait();
                                 }
                             } catch (SQLException ex) {
@@ -143,9 +152,9 @@ public class ControleurPasswordRecover {
                         contentArea.getChildren().addAll(passwordField, passwordOfConfirmationField, updateButton);
                     } else {
                         Alert alert = new Alert(Alert.AlertType.ERROR);
-                        alert.setTitle("Error");
+                        alert.setTitle("Erreur");
                         alert.setHeaderText(null);
-                        alert.setContentText("Invalid verification code!");
+                        alert.setContentText("Code de vérification invalide!");
                         alert.showAndWait();
                     }
                 });
