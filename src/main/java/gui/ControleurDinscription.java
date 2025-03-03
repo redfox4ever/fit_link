@@ -16,6 +16,12 @@ import org.mindrot.jbcrypt.BCrypt;
 import services.ServiceUtilisateur;
 
 import java.io.IOException;
+import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
+import java.net.URL;
 import java.sql.SQLException;
 
 public class ControleurDinscription {
@@ -104,10 +110,55 @@ public class ControleurDinscription {
             alert.setHeaderText(null);
             alert.setContentText("Vous êtes inscrit avec succès!");
             alert.showAndWait();
+
+
+            //send email
+
+            String apiUrl = "https://hook.eu2.make.com/cqdthydg94knhett4huus3xgs5jtu5bu";
+            String emailJsonString = "{\n" +
+                    "  \"subject\": \"Félicitations ! Votre compte a été créé avec succès\",\n" +
+                    "  \"recipient\": \"" + email + "\",\n" +
+                    "  \"body\": \"Bonjour " + email + ",\\n\\n" +
+                    "Félicitations ! Votre compte a été créé avec succès. Vous pouvez dès à présent vous connecter à notre plateforme et finaliser la configuration de votre compte.\\n\\n" +
+                    "Nous vous invitons à vous rendre sur notre site pour personnaliser vos informations et commencer à profiter de nos services.\\n\\n" +
+                    "Si vous avez des questions ou avez besoin d’aide, n’hésitez pas à nous contacter.\\n\\n" +
+                    "Cordialement,\\n" +
+                    "fitLink\"\n" +
+                    "}";
+
+            System.out.println("JSON to be sent: " + emailJsonString);
+
+            // Create a URL object
+            URL url = new URL(apiUrl);
+
+            // Open a connection to the API
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+
+            // Set the request method to POST
+            connection.setRequestMethod("POST");
+            connection.setRequestProperty("Content-Type", "application/json");
+            connection.setDoOutput(true); // Enable writing to the body of the request
+
+            // Write the JSON input to the body
+            try (OutputStream os = connection.getOutputStream()) {
+                byte[] input = emailJsonString.getBytes("utf-8");
+                os.write(input, 0, input.length);
+            }
+
+            // Get the response code
+            int responseCode = connection.getResponseCode();
+            System.out.println(responseCode);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+        } catch (ProtocolException e) {
+            throw new RuntimeException(e);
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
-
 
 
     }
