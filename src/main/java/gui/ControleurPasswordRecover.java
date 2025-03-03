@@ -39,6 +39,23 @@ public class ControleurPasswordRecover {
     private VBox contentArea;
 
     @FXML
+    void navigerConnexion(ActionEvent event) {
+
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("/PageDeConnexion.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        Scene scene = new Scene(root);
+        Stage stage = (Stage)  TFEmail.getScene().getWindow();
+        scene.getStylesheets().add(getClass().getResource("/PageDeConnexion.css").toExternalForm());
+        stage.setScene(scene);
+
+    }
+
+
+    @FXML
     void checkEmail(ActionEvent event) {
         String email = TFEmail.getText();
         try {
@@ -63,6 +80,14 @@ public class ControleurPasswordRecover {
                     throw new RuntimeException(ex);
                 }
 
+
+                {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Alert");
+                    alert.setHeaderText(null);
+                    alert.setContentText("nous avons envoyé un e-mail avec un code à votre adresse");
+                    alert.showAndWait();
+                }
 
                 contentArea.getChildren().clear();
                 TextField verificationCodeField = new TextField();
