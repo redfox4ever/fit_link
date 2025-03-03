@@ -51,6 +51,9 @@ public class ControleurDeConnexion  implements Initializable {
     @FXML
     private ImageView captchaImage;
 
+    @FXML
+    private Hyperlink HLPasswordRecovery;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         // Generate a CAPTCHA image
@@ -188,6 +191,24 @@ public class ControleurDeConnexion  implements Initializable {
             throw new RuntimeException(e);
         }
 
+
+    }
+
+
+    @FXML
+    void navigatePasswordRecovery(ActionEvent event) {
+
+
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("/PagePasswordRecovery.fxml"));
+            Stage stage = (Stage)  TFEmail.getScene().getWindow();
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("/PageDinscription.css").toExternalForm());
+            stage.setScene(scene);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
